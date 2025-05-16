@@ -1,0 +1,28 @@
+.button {
+    width: fit-content;
+    margin: auto;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.25s;
+    font-family: var(--font);
+    color: var(--white-color);
+    border-radius: 30px;
+}
+.accent:hover {
+    background-color: var(--primary-hover-color);
+}
+.accent{
+    background-color: var(--primary-color);
+}
+
+.small {
+    height: 44px;
+    padding-inline: 15px;
+}
+
+.medium {
+    height: 66px;
+    padding-inline: 70px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../public/OpenSans-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../public/OpenSans-SemiBold.ttf');
+    font-weight: 600;
+}
+
+:root {
+    --font: 'Open Sans', sans-serif;
+    --primary-color: #fe734cd9;
+    --primary-hover-color: #FE724C;
+    --text-color: #000;
+    --text-secondary-color: #5b5b5E;
+    --white-color: #fff;
+    --separator-color: #D4D6E0;
+    --border-color: #eeeeee;
+    --border-color-focused: #eeeeee;
+}
+
+body {
+    font-family: var(--font);
+}
+
+.container-box {
+    width: 1230px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@media all and (max-width: 1240px) {
+    .container-box {
+        width: 1023px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media all and (max-width: 1240px) and (max-width: 1023px) {
+    .container-box {
+        width: 708px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media all and (max-width: 1240px) and (max-width: 1023px) and (max-width: 767px) {
+    .container-box {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.form{
+    width: 49%;
+    box-sizing: border-box;
+    padding-inline: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
