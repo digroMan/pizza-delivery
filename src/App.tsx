@@ -1,4 +1,4 @@
-import {  useState, type MouseEvent } from 'react';
+import {  useState, type ChangeEvent, type MouseEvent } from 'react';
 import Button from './components/Button/Button';
 import Input from './components/Input/Input';
 
@@ -22,19 +22,34 @@ function App() {
 		setCounter((preState) => preState + 1);
 	};
 
+	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+		const {name, value} = event.target;
+
+		setFormData(prevForm => {
+			return {
+				...prevForm,
+				[name]: value 
+			};
+		});
+	};
+
 	return (
 		<div className='container-box'>
 			<form name='auth' className='form'>
 				<Input
-					onChange={setFormData}
+					onChange={handleChange}
+					name='email'
 					value={formData?.email}
 					placeholder='Email'
 					type='text'
 				/>
-				{/* <Input
+				<Input
+					onChange={handleChange}
+					name='password'
+					value={formData?.password}
 					placeholder='Пароль'
 					type='text'
-				/> */}
+				/>
 				<Button
 					children="Вход"
 					onClick={addCounter}

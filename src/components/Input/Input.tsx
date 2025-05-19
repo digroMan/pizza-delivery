@@ -6,9 +6,10 @@ function Input({
 	children, 
 	className, 
 	placeholder, 
-	// onChange, 
+	onChange, 
 	type, 
 	value, 
+	name,
 	...props
 } : InputProps) {
 	return (
@@ -18,11 +19,9 @@ function Input({
 				className
 			)} 
 			type={type}
+			name={name}
 			placeholder={placeholder}
-			onChange={() => {
-				// onChange({value});
-				console.log(value);
-			}}
+			onChange={onChange}
 			value={value}
 			{...props}>{children}</input>
 	);

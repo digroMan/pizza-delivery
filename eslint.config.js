@@ -28,6 +28,7 @@ export default tseslint.config(
 			'quotes':['error', 'single'],
 			'react/prop-types': [0],
 			'indent': ['error', 'tab'],
+      'allowInterfaces': ['warn']
     },
   },
 )
